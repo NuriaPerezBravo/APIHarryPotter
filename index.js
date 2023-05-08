@@ -250,7 +250,7 @@ let charNames = '';
 const allHogwartsCharecters = document.querySelector(".characters-inhogwarts");
 const allHogwartsTypes = document.querySelector(".types-inhogwarts");
 const charactersAll = function(){
-  fetch(`https://hp-api.herokuapp.com/api/characters`)
+  fetch(`https://hp-api.onrender.com/api/characters`)
   .then(res=> {return res.json()})
   .then(data=>{
     data.forEach(function (charData) {
