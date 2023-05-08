@@ -1,0 +1,1292 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Sedgwick+Ave+Display&family=Sono:wght@200;300;400;500;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Legendary Runes Free Trial", sans-serif;
+    letter-spacing: 2px;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    padding: 10px;
+}
+
+@media (max-width:481px) {
+    body{
+      height: 92.5vh;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+    border-radius: 8px;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #b79b48;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #694c21;
+}
+  
+.main-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(0, 7, 84, 0.25);
+    backdrop-filter: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* login registration form */
+.form-for-login{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 25;
+    display: none;
+}
+
+.form-overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    cursor:pointer;
+}
+
+.signin-signup-form{
+    position: relative;
+    width: 350px;
+    height: 400px;
+    background-color: rgba(0, 2, 37);
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.form-headings{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-headings span{
+    flex-basis: 50%;
+    text-align: center;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #b79b48;
+}
+
+.login-heading{
+    border-bottom: 2px solid #b79b48;
+}
+
+.form-container{
+    display: flex;
+    width: 700px;
+    position: relative;
+    top: 2em;
+    transition: .5s;
+    /* justify-content: space-between; */
+}
+
+.form-container .login{
+    position: relative;
+    width: 350px;
+    padding: 1em;
+}
+
+.form-container .register{
+    position: relative;
+    width: 350px;
+    padding: 1em;
+}
+
+.form-container form input{
+    width: 100%;
+    outline: none;
+    height: 2.5em;
+    color: #634f13;
+    padding: .5em;
+    font-size: 1.1em;
+    margin: .2em 0 ;
+    border-radius: 4px;
+    border: none;
+    font-family: sans-serif;
+    letter-spacing: 0;
+}
+
+.login-btn, .register-btn{
+    cursor: pointer;
+}
+
+/* user details  */
+
+.user-details{
+    width: 250px;
+    position: absolute;
+    z-index: 25;
+    top: 5em;
+    right: 1em;
+    border-radius: 12px;
+    overflow: hidden;
+    display: none;
+}
+
+.user-details-container{
+    position: relative;
+    display: flex;
+    left: 0;
+    background: rgb(157, 157, 157);
+    width: 500px;
+    transition: .5s;
+}
+.user-box{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-color: #b79b48;
+    text-align: center;
+    border-radius: 12px;
+    padding: .3em;
+}
+
+.user-close{
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.user-image{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    margin-top: .5em;
+    background-color: #989898;
+}
+
+.user-image img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    display: none;
+}
+
+.user-name{
+    font-size: 2em;
+}
+
+.user-sorting{
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #ff8c00;
+    cursor: pointer;
+}
+
+.user-details div{
+    font-family: sans-serif;
+    letter-spacing: 0;
+}
+
+.user-email,.user-password{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: .5em 0;
+    padding: .2em .2em .2em .5em;
+    border: 1px solid #000;
+    text-align: left;
+    height: 25px;
+}
+
+.user-change{
+    width: 100%;
+    padding: .5em 0;
+    background-color: rgb(0, 145, 255);
+    cursor: pointer;
+    color: #fff;
+}
+
+.logout-remove{
+    position: relative;
+    display: flex;
+    height: 35px;
+    width: 100%;
+    color: #fff;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.user-logout{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: inline;
+    padding: 8px 0;
+    background-color: rgb(255, 136, 0);
+    border-radius: 0 0 0 12px;
+    cursor: pointer;
+}
+
+.user-remove{
+    border-radius: 0 0 12px 0;
+    position: relative;
+    width: 50%;
+    padding: 8px 0;
+    background-color:red;
+}
+
+.edit-img{
+    position: absolute;
+    color: #989898;
+    bottom: .5em;
+    right: .5em;
+    padding: .3em;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+#upload-img{
+    display: none;
+}
+
+/* user-change form  //////////////////////////// */
+.user-details-change{
+    width: 50%;
+    padding: 1em;
+}
+.change-form{
+    margin-top: 2em;
+}
+.change-form input{
+    width: 100%;
+    height: 35px;
+    margin: .2em 0;
+    padding-left: .5em;
+    font-size: 1.3em;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-family: sans-serif;
+    letter-spacing: 0;
+}
+
+.change-btn{
+    color: #fff;
+    background-color: #0051d2;
+    cursor: pointer;
+}
+.cancel-btn{
+    color: #fff;
+    cursor: pointer;
+    background-color: red;
+}
+
+
+
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    background: rgb(0,9,36);
+    background: linear-gradient(90deg, rgba(0,9,36,1) 7%, rgba(121,28,9,1) 26%, rgba(0,56,255,1) 43%, rgba(0,255,171,1) 59%, rgba(219,255,0,1) 78%, rgba(6,4,51,1) 96%);
+    border-radius: 8px 8px 0 0;
+}
+
+.header-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 2em;
+}
+
+.titulo{
+    font-family: 'Cinzel Decorative', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    color: white;
+}
+
+.titulo img{
+    width: 100px;
+}
+
+.subtitulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.user{
+    width: 60px;
+    display: flex;
+    position: absolute;
+    z-index: 25;
+    top: 1em;
+    right: 1em;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.user img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sideBar_left{
+    position: absolute;
+    top: 127px;
+    left: 10px;
+    bottom: 0;
+    width: 120px;
+    border-radius: 0 0 0 8px;
+    padding: 12px;
+    *background-color: #d28f0b;
+}
+
+.sideBar_left nav{
+    position: relative;
+    top: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sideBar_left nav ul li{
+    list-style: none;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    
+}
+
+.sideBar_left nav ul li:hover i{
+    text-shadow: 0 0 20px #946300;
+}
+
+.sideBar_left nav ul li i {
+    font-size: 2em;
+    display: block;
+    color: #b79b48;
+}
+
+.sideBar_left nav ul li a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-right: 35px;
+}
+
+@media (max-width:761px) {
+    .header{
+      border-radius: 0;
+    }
+}
+
+@media (max-width:481px) {
+    .header-nav{
+      padding: 0 1em;
+    }
+    .title{
+      font-size: 1.4em;
+      top: .15em;
+      letter-spacing: 10.5px;
+    }
+    .title span{
+      top: 2.3em;
+      font-size: .4em;
+    }
+    .user{
+      height: 40px;
+      width: 40px;
+    }
+    .logo{
+      height: 40px;
+      width: 40px;
+    }
+}
+
+@media (max-width:375px) {
+    .header-nav{
+      padding: 0 .7em;
+    }
+    .title{
+      font-size: 1.2em;
+      top: .2em;
+      letter-spacing: 10px;
+    }
+    .title span{
+      top: 2.6em;
+      font-size: .4em;
+      letter-spacing: 2px;
+    }
+    .user{
+      height: 35px;
+      width: 35px;
+    }
+}
+
+.border-bottom {
+    border-bottom: 3px solid #b79b48;
+}
+
+.box-container {
+    height: 280px;
+    width: 200px;
+    border-radius: 12px;
+}
+
+.box-container .char-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  @media (max-width:769px) {
+    .sidebar-left {
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 100%;
+      top: auto;
+      height: 100px;
+      border-radius: 0;
+      z-index: 30;
+      height: 120px;
+      background-image: linear-gradient(rgba(26, 30, 53, 0.7), rgba(19, 26, 42, 0.7)), url(img/navimg.jfif);
+      background-position: center;
+    }
+    .sidebar-left nav {
+      position: relative;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .sidebar-left nav ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sidebar-left nav ul li{
+      flex: 1 1 0;
+    }
+  }
+  @media (max-width:481px) {
+    .sidebar-left{
+      height: 80px;
+      padding: 0;
+    }
+    .sidebar-left nav ul li{
+      margin: 0;
+    }
+    .sidebar-left nav ul li i{
+      font-size: 1.8em;
+    }
+    .sidebar-left nav ul li a{
+      font-size: .8em;
+    }
+  }
+  @media (max-width:375px) {
+    .sidebar-left{
+      height: 60px;
+    }
+    .sidebar-left nav ul li a{
+      font-size: .5em;
+    }
+  }
+  @media (max-width:320px) {
+    .sidebar-left nav ul li i{
+      font-size: 1.4em;
+    }
+  }
+  /* homebox--head////////////////////////////////// */
+  .home-box {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.708),rgb(0, 0, 0, 0.6), rgb(0, 0, 0,0.8)), url(img/mainbg.jpg);
+    background-position: left;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    left: 122px;
+    top: 90px;
+    bottom: 0;
+    border-radius: 0 0 8px 0;
+    overflow-y: scroll;
+    display: block;
+  }
+  
+  .home-box-head {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .home-box-head .welcome {
+    font-size: 4em;
+    text-align: center;
+    color: #b79b48;
+    transition: .3s;
+    cursor: default;
+  }
+  .welcome:hover{
+    letter-spacing: .1em;
+  }
+  @media (max-width:769px) {
+    .home-box{
+    left: 0;
+    top: 72px;
+    bottom: 121px;
+    background-position: center;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    body{
+      padding: 0;
+    }
+    .main-container{
+      border-radius: 0;
+    }
+  }
+  @media (max-width:481px) {
+    .home-box{
+      bottom: 81px;
+      }
+    .home-box-head .welcome {
+      font-size: 2em;
+    }
+  }
+  @media (max-width:375px) {
+    .home-box{
+      bottom: 61px;
+    }
+    .home-box-head .welcome {
+      font-size: 1.8em;
+    }
+  }
+  @media (max-width:360px) {
+    .home-box-head .welcome {
+      font-size: 1.6em;
+    }
+  }
+  /* hogwarts-details/////////////////////////////////// */
+  
+  .hogwarts-details {
+    position: relative;
+    width: 100%;
+  }
+  .about-hogwarts{
+    width: 100%;
+    height: 80vh;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 2em;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, .80),
+      rgba(0, 0, 0, .80)),url(img/hogwarts-bg.jfif);
+      background-size: cover;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+  }
+  .about-hogwarts div{
+    color: #b79b48;
+  }
+  .about-hogwarts h1{
+    text-align: center;
+    color: #6b4203;
+  }
+  .more-from-hogwarts{
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em;
+  }
+  .more-from-hogwarts .more{
+    padding: 1em;
+    flex: 1 1 0;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    min-width: 350px;
+    max-width: 400px;
+  }
+  .more-from-hogwarts .more h1{
+    color: #695004;
+  }
+  .more-from-hogwarts img{
+    height: 120px;
+    width: 120px;
+  }
+  .more-from-hogwarts p{
+    color: #b79b48;
+    text-align: center;
+  }
+  @media (max-width:769px) {
+    .about-hogwarts{
+      width: 100%;
+      height: 80vh;
+      font-size: 1.2em;
+    } 
+    .more-from-hogwarts .more{
+      min-width: 280px;
+      max-width: 350px;
+    }
+  }
+  @media (max-width:481px) {
+    .more-from-hogwarts .more{
+      flex: 1 1 0;
+    } 
+  }
+  @media (max-width:361px) {
+    .about-hogwarts{
+      width: 100%;
+      height: 80vh;
+      font-size: 1em;
+    }
+    .more-from-hogwarts .more{
+      font-size: .9em;
+    }
+  }
+  @media (max-width:320px) {
+    .more-from-hogwarts .more{
+      font-size: .5em;
+    }
+  }
+  /* ===================syllabus==================== */
+  
+  .syllabus {
+    position: absolute;
+    right: 0;
+    left: 122px;
+    top: 90px;
+    bottom: 0;
+    border-radius: 0 0 8px 0;
+    overflow-y: scroll;
+    display: none;
+  }
+  
+  .syllabus-nav ul {
+    position: sticky;
+    top: 10em;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #000;
+  }
+  
+  .syllabus-nav ul li {
+    list-style: none;
+    line-height: 30px;
+  }
+  
+  .syllabus-nav ul li a {
+    text-decoration: none;
+    color: #b79b48;
+  }
+  
+  .syllabus-nav ul li a:hover {
+    color: #ffbf00;
+  }
+  
+  .courses {
+    display: none;
+    flex-wrap: wrap;
+  }
+  
+  .courses .subject {
+    flex: 1 1 0;
+    min-width: 250px;
+    max-width: 450px;
+    background: rgb(45, 50, 77);
+    color: #fff;
+    margin: .5em;
+  }
+  
+  .courses .subject:hover {
+    transform: translateY(-5px);
+  }
+  
+  .first-year {
+    display: flex;
+  }
+  
+  .courses .subject img {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .courses .subject h3 {
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .courses .subject p {
+    padding: .5em;
+    text-align: justify;
+  }
+  @media (max-width:769px) {
+    .syllabus {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 121px;
+    }
+    .courses{
+      justify-content: center;
+    }
+  }
+  @media (max-width:481px) {
+    .syllabus {
+      right: 0;
+      left:0;
+      width: 100%;
+      top: 72px;
+      bottom: 81px;
+      border-radius: 0;
+    }
+    .syllabus-nav ul {
+      width: 100%;
+      padding: 0;
+    }
+    
+    .syllabus-nav ul li {
+      line-height: 20px;
+      list-style: none;
+    }
+    
+    .syllabus-nav ul li a {
+      font-size: .8em;
+    }
+    .courses .subject h3 {
+      font-size: 1em;
+    }
+    
+    .courses .subject p {
+      font-size: .5em;
+    }
+    .courses .subject {
+      min-width: 150px;
+      max-width: 250px;
+      background: rgb(45, 50, 77);
+      color: #fff;
+      margin: .5em;
+    }
+  }
+  @media (max-width:375px) {
+    .syllabus {
+      bottom: 61px;
+    }
+    
+    .syllabus-nav ul {
+      width: 100%;
+      padding: 0 1em;
+    }
+    
+    .syllabus-nav ul li {
+      list-style: none;
+    }
+  }
+  /* staffs in hogwarts========================= */
+  
+  .staffs {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    left: 122px;
+    top: 90px;
+    bottom: 0;
+    border-radius: 0 0 8px 0;
+    overflow-y: scroll;
+    display: none;
+  }
+  
+  .hogwartsStaff {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+  }
+  
+  .cards {
+    flex: 1 1 0;
+    min-width: 150px;
+    max-width: 350px;
+    background: rgb(65, 58, 30);
+    color: #fff;
+    margin: .5em;
+    border-radius: 8px;
+    padding: 0 0 4px 0;
+  }
+  
+  .cards:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cards img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .cards h2 {
+    font-size: 1.1em;
+    text-align: center;
+  }
+  
+  .cards h3 {
+    font-size: .8em;
+    text-align: center;
+  }
+  @media (max-width:760px) {
+    .staffs {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 121px;
+    }
+  }
+  @media (max-width:481px) {
+    .staffs {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 80px;
+    }
+  }
+  @media (max-width:375px) {
+    .staffs {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 60px;
+    }
+  }
+  /* revealed house  */
+  .selected-house{
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+  }
+  .house-name{
+    color: #b79b48;
+    font-size: 8em;
+    transform: rotateZ(-15deg);
+  }
+  /* houses in hogwarts============================ */
+  .houses-in-hogwarts {
+    position: relative;
+    display: none;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    left: 122px;
+    top: 90px;
+    bottom: 0;
+    border-radius: 0 0 8px 0;
+  }
+  
+  .house-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .house-cards {
+    display: flex;
+    width: 45%;
+    position: relative;
+    background: rgb(65, 58, 30);
+    color: #fff;
+    margin: .5em;
+    border-radius: 8px;
+  }
+  
+  .house-cards .img {
+    position: relative;
+    max-height: 200px;
+    max-width: 200px;
+  }
+  
+  .house-cards .img img {
+    height: 100%;
+    width: 100%;
+    background-color: #ff8c00;
+    border-radius: 8px 0 0 8px;
+    padding: 1em;
+  }
+  
+  .house-details {
+    padding: .5em;
+  }
+  
+  .house-details .details {
+    text-align: left;
+    color: yellow;
+  }
+  
+  .house-cards .details span {
+    color: #fff;
+  }
+  @media (max-width:769px) {
+    .houses-in-hogwarts {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 121px;
+    }
+    .sorting-hat h1{
+      font-size: 3em;
+    }
+    .house-name{
+      font-size: 6em;
+    }
+  }
+  @media (max-width:481px) {
+    .houses-in-hogwarts {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 81px;
+    }
+    .house-name{
+      font-size: 4em;
+    }
+  }
+  @media (max-width:375px) {
+    .houses-in-hogwarts {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 61px;
+    }
+    .house-name{
+      font-size: 3em;
+    }
+  }
+  
+  /* get sorted using questions===================== */
+  .container-for-sort {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .sorting-hat {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(img/sorting-hat-img.jfif);
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+  }
+  
+  .sorting-hat h1 {
+    font-size: 4em;
+    color: #b79b48;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+  
+  .sorting-hat .sort-btn {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+    background-color: #b79b48;
+    padding: .2em .5em;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .sorting {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+  }
+  #sorting-quiz{
+    display: none;
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  
+  .quiz-container {
+    position: absolute;
+    background-image: linear-gradient(rgba(3, 62, 70, 0.8), rgba(15, 0, 77, 0.8)), url(img/hogwarts-bg.jfif);
+    background-position: center;
+    background-size: cover;
+    width: 85%;
+    height: 85%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -48%);
+    overflow-y: scroll;
+    z-index: 5;
+    border-radius: 8px;
+  }
+  
+  .questions {
+    margin: 2em;
+  }
+  
+  .close-ico {
+    position: sticky;
+    left: 95%;
+    top: 2em;
+  }
+  
+  .close-ico i {
+    background-color: #000;
+    border-radius: 50%;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  .quiz {
+    margin: 1em 0;
+  }
+  
+  .quiz p {
+    font-size: 1.6em;
+    color: #b79b48;
+  }
+  
+  .quiz-options .option {
+    margin: 5px 0;
+    padding: 0 3em 0 1em;
+  }
+  
+  .quiz-options input {
+    display: none;
+  }
+  
+  .quiz-options label {
+    height: 100%;
+    padding: .3em .5em .3em 2em;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .quiz-options label i {
+    font-size: 1.2em;
+    transform: translate(-6px, 1px);
+    visibility: hidden;
+  }
+  
+  .quiz-options input:checked~label {
+    color: #b79b48;
+  }
+  
+  .quiz-options input:checked~label i {
+    color: #b79b48;
+    visibility: visible;
+  }
+  
+  .questions .btn {
+    margin-left: 78%;
+    font-size: 1.3em;
+    padding: 5px;
+    border: none;
+    background-color: #b79b48;
+    box-shadow: 8px 8px #000;
+    cursor: pointer;
+  }
+  
+  .questions .btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px #000;
+  }
+  @media (max-width:760px) {
+    .sorting-hat h1 {
+      font-size: 3em;
+    }
+    .questions {
+      margin: 2em;
+    }
+    
+    .close-ico {
+      margin-right: 1.5rem
+    }
+    
+    .close-ico i {
+      font-size: 2em;
+    }
+    
+    .quiz {
+      margin: 1em 0;
+    }
+    
+    .quiz p {
+      font-size: 1.2em;
+    }
+    
+    .quiz-options .option {
+      margin: 3px 0;
+      padding: 0 2em 0 .8em;
+    }
+    
+    .quiz-options label {
+      padding: .3em 0;
+      font-size: 1.2em;
+    }
+    
+    .quiz-options label i {
+      font-size: 1em;
+    }
+  }
+  /* characters in hogwarts ========================== */
+  
+  .characters {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    left: 122px;
+    top: 90px;
+    bottom: 0;
+    border-radius: 0 0 8px 0;
+    overflow-y: scroll;
+    display: none;
+  }
+  
+  .characters-inhogwarts {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+  }
+  
+  .types-inhogwarts {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+  }
+  
+  .types {
+    position: sticky;
+    left: 122px;
+    right: 0;
+    top: 0;
+    padding: 1em;
+    background-color: #000;
+    z-index: 5;
+  }
+  
+  #char-type {
+    position: relative;
+    width: 250px;
+    height: 35px;
+    left: 2%;
+    outline: none;
+    font-size: 1.2em;
+    font-weight: bolder;
+    background-color: #b79b48;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    padding-left: .5em;
+  }
+  
+  #char-type option {
+    background: #000;
+    color: #b79b48;
+}
+@media (max-width:760px) {
+    .characters {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 121px;
+    }
+}
+@media (max-width:481px) {
+    .characters {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 80px;
+    }
+}
+@media (max-width:375px) {
+    .characters {
+      right: 0;
+      left: 0;
+      top: 72px;
+      bottom: 60px;
+    }
+}

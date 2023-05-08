@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harry Potter API</title>
+  <link rel="icon" href="img/iconoreliquias.jpeg">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <section class="main-container">
+    <div class="form-for-login">
+      <div class="form-overlay"></div>
+      <div class="signin-signup-form">
+        <div class="form-headings">
+          <span class="login-heading">Entrar/</span>
+          <span class="register-heading">Registrarse</span>
+        </div>
+        <div class="form-container">
+          <form class="login">
+            <input type="email" placeholder="Escribe tu email" class="login-email" required>
+            <input type="password" placeholder="Contraseña" class="login-password" required>
+            <input type="submit" value="Entrar" class="form-btn login-btn">
+          </form>
+          <form class="register">
+            <input type="text" placeholder="Nombre" class="register-name" required minlength="2" maxlength="12">
+            <input type="email" placeholder="Escribe tu email" class="register-email" required>
+            <input type="password" placeholder="Escribe tu Contraseña" class="register-password" required minlength="4">
+            <input type="password" placeholder="Confirma tu contraseña" class="register-c-password" required
+              minlength="4">
+            <input type="submit" value="Registrarse" class="form-btn register-btn">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="user-details">
+      <div class="user-details-container">
+        <div class="user-box">
+          <i class="fa-solid fa-xmark user-close"></i>
+          <div class="user-image"><img id="profile-pic" src="" alt="profile pic"><label
+              class="fa-solid fa-camera edit-img" for="upload-img"></label><input type="file" name="image"
+              id="upload-img" accept=".png,.jpg,.jpeg"></div>
+          <h1 class="user-name">Nombre de usuario</h1>
+          <h3 class="user-house"><button class="user-sorting">Conoce tu casa</button></h3>
+          <div class="user-email">username@emamil.com</div>
+          <div class="user-password">********</div>
+          <div class="user-change">Cambiar<i class="fa-solid fa-pen-to-square edit-detail"></i></div>
+          <div class="logout-remove">
+            <div class="user-logout">Cerrar sesión<i class="fa-solid fa-right-from-bracket"></i></div>
+            <div class="user-remove">Borrar<i class="fa-solid fa-trash"></i></div>
+          </div>
+        </div>
+        <div class="user-details-change">
+          <form class="change-form">
+            <input type="text" class="Cambiar nombre" minlength="2" required>
+            <input type="email" name="Cambiar email" class="change-email" required>
+            <input type="password" name="Cambiar contraseña" class="previous-password" placeholder="Contraseña anterior"
+              required>
+            <input type="password" name="Cambiar contraseña" class="change-password" placeholder="Nueva contraseña"
+              required>
+            <input type="password" name="Cambiar contraseña" class="change-c-password"
+              placeholder="Confirmar contraseña" required>
+            <input type="submit" value="Cambiar" class="change-btn">
+            <input type="submit" value="Cancelar" class="cancel-btn">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--header-->
+
+    <div class="header">
+      <h1 class="titulo">HOGWARTS <img src="img/escudo.png" alt=""></h1>
+      <h2 class="subtitulo">Escuela de Mágia y Hechicería</h2>
+      <img class="user" src="img/usuario.png" alt="usuario">
+    </div>
+
+    <!--menu-->
+
+    <div class="sideBar_left">
+      <nav>
+        <ul>
+          <li class="nav-btn nav-home"><i class="fa-solid fa-house-chimney"></i><a href="#">Home</a></li>
+          <li class="nav-btn"><i class="fa-solid fa-book-open"></i></i><a href="#">Clases</a></li>
+          <li class="nav-btn"><i class="fa-solid fa-user-tie"></i><a href="#">Profesores</a></li>
+          <li class="nav-btn"><i class="fa-solid fa-user-group"></i><a href="#">Tu casa</a></li>
+          <li class="nav-btn"><i class="fa-solid fa-hat-wizard"></i><a href="#">Alumnos</a></li>
+          <li class="nav-btn"><i class="fa-solid fa-wand"></i><a href="#">Hechizos</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-box">
+    </div>
+
+    <!-- home-box ======================================-->
+
+    <div class="home-box show-display">
+      <div class="home-box-head">
+        <h1 class="welcome">BIENVENIDO A HOGWARTS</h1>
+      </div>
+      <!-- hogwarts-details //////////////////////// -->
+      <div class="hogwarts-details">
+        <div class="about-hogwarts">
+          <div>
+            <h1>Sobre Hogwarts</h1>
+            Hogwarts estaba construido en una zona de valles -las montañas que lo rodeaban formaban parte del paisaje-,
+            con el Gran Lago, bastante grande, al sur del edificio principal. Las enormes puertas principales de roble
+            que daban al vestíbulo estaban orientadas al oeste y daban a unos prados en pendiente. El profundo Bosque
+            Prohibido se extendía al oeste del castillo. También había invernaderos exteriores y huertos en los terrenos
+            de la escuela.
+          </div>
+        </div>
+        <div class="more-from-hogwarts">
+          <div class="more">
+            <img src="img/spell.png" alt="classes">
+            <h1>Asiste a Clases</h1>
+            <p>Construye tu camino escolar siguiendo las asignaturas que se imparten en Hogwarts y gana puntos para tu
+              casa a través de tus notas.</p>
+          </div>
+          <div class="more">
+            <img src="img/potions.png" alt="classes">
+            <h1>Compra</h1>
+            <p>Ingredientes para pociones, chistes y bromas o kit de mantenimiento para escobas, gasta tus Galeones en
+              más de 290 objetos.</p>
+          </div>
+          <div class="more">
+            <img src="img/owl.png" alt="classes">
+            <h1>Adopta una mascota</h1>
+            <p>Búhos y gatos, ranas y ratas, frailecillos pigmeos y tantos otros te acompañarán a lo largo de tus años
+              escolares.</p>
+          </div>
+          <div class="more">
+            <img src="img/quidditch2.png" alt="classes">
+            <h1>Juega Quidditch</h1>
+            <p>Participa en la Copa entre casas de Quidditch y apoya a tu equipo en los torneos nacionales e
+              internacionales.</p>
+          </div>
+        </div>
+
+        <!-- <div class="casas">
+
+          <div class="houses-details">
+            <h1>Casas</h1><br>
+            Hogwarts esta dividido en cuatro casa,<br> cada una con el apellido de su fundador:
+            <br><span>Godric Gryffindor</span>, <span>Salazar Slytherin</span>, <span>Rowena
+              Ravenclaw</span> and <span>Helga Hufflepuff</span>
+          </div>
+          <div class="diferentes-casas">
+            <div class="casa de gryffindor">
+              <img src="img/griffindor.png" alt="griffindor house logo">
+              <h3>Gryffindor</h3>
+              <p>Gryffindor valora el coraje, la valentía, el valor y la caballerosidad. La mascota de Gryffindor es el león,
+                y sus colores son el rojo escarlata y el dorado. La jefa de esta casa es la profesora de Transfiguración
+                y subdirectora, Minerva McGonagall, hasta que se convierte en directora,
+                y el fantasma de la casa es Sir Nicholas de Mimsy-Porpington, más conocido como Casi
+                Nick casi decapitado. Según Rowling, Gryffindor corresponde aproximadamente al elemento fuego.
+                El fundador de la casa es Godric Gryffindor.</p>
+            </div>
+            <div class="casa de hufflepuff">
+              <img src="img/hufflepuff.png" alt="hufflepuff house logo">
+              <h3>Hufflepuff</h3>
+              <p>Hufflepuff valora el trabajo duro, la paciencia, la justicia y la lealtad. La mascota de la casa es el tejón
+                y sus colores son el amarillo canario y el negro. La jefa de esta casa es la
+                Pomona Sprout, y el fantasma de la casa es el Fraile Gordo. Según
+                Rowling, Hufflepuff corresponde aproximadamente al elemento tierra. La fundadora de esta
+                casa es Helga Hufflepuff.</p>
+            </div>
+            <div class="casa de ravenclaw">
+              <img src="img/ravenclaw.png" alt="ravenclaw house logo">
+              <h3>Ravenclaw</h3>
+              <p>Ravenclaw valora la inteligencia, el aprendizaje, la sabiduría y el ingenio.
+                La mascota de esta casa es un águila y los colores de la casa son el azul y el bronce. El jefe de esta casa es el profesor de Encantamientos,
+                y el fantasma de la casa es la Dama Gris. Según Rowling,
+                Ravenclaw corresponde aproximadamente al elemento aire. La fundadora de esta casa es Rowena
+                Ravenclaw.</p>
+            </div>
+            <div class="casa de slytherin">
+              <img src="img/slytherin.png" alt="slytherin house logo">
+              <h3>Slytherin</h3>
+              <p>Slytherin valora la ambición, la astucia, el liderazgo y el ingenio.
+                cualquier cosa para salirse con la suya. La mascota de Slytherin es la serpiente, y los colores de la casa son el verde y el plateado.
+                colores de la casa son el verde y el plateado. El fantasma de la casa Slytherin es el Barón Sangriento.
+                Según Rowling, Slytherin corresponde aproximadamente al elemento agua. El fundador
+                de esta casa es Salazar Slytherin.</p>
+            </div>
+            <div class="academia">
+              <p>Hogwarts es un internado de enseñanza secundaria mixta que acoge a niños de once a diecisiete años.</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Syllabus ===================================== -->
+
+    <div class="syllabus show-display">
+      <nav class="syllabus-nav types">
+        <ul class="years-list">
+          <li><a href="#" class="years">1er año</a></li>
+          <li><a href="#" class="years">2do año</a></li>
+          <li><a href="#" class="years">3er año</a></li>
+          <li><a href="#" class="years">4to año</a></li>
+          <li><a href="#" class="years">5to año</a></li>
+          <li><a href="#" class="years">6to año</a></li>
+          <li><a href="#" class="years">7mo año</a></li>
+        </ul>
+      </nav>
+
+      <!-- courses ===================== -->
+
+      <!-- first-year======================= -->
+
+      <div id="first-year" class="courses first-year">
+        <div class="subject">
+          <img src="img/courses/astronomy1.jpg" alt="astronomy">
+          <h3>Astronomía <span>(101)</span></h3>
+          <p>Ya se han publicado todas las nuevas lecciones de primer año. Todas mis tareas son de libro abierto: puedes
+            consultar las lecciones mientras las haces.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/charms.jfif" alt="charms">
+          <h3>Encantamientos<span>(101)</span></h3>
+          <p>El Primer Año de Encantamientos presenta una visión general de los fundamentos del lanzamiento de hechizos.
+            Empezando por las leyes
+            mágicas esenciales y tocando brevemente la tradición de la varita mágica.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/defense.jfif" alt="dark defense">
+          <h3>Defensa contra las artes oscuras<span>(101)</span></h3>
+          <p>Defensa contra las artes oscuras de primer año, servirá como una introducción que sentará las bases
+            para tu educación mágica, prepararte adecuadamente en tu educación y prepararte adecuadamente
+            para futuros trabajos en defensa contra las artes oscuras.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/flying.jfif" alt="flying">
+          <h3>Vuelo<span>(101)</span></h3>
+          <p>¡Bienvenido a Transporte Mágico! En esta clase cubriremos el transporte mágico,
+            así como Transporte muggle.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/herbology.jfif" alt="herbology">
+          <h3>Herbología <span>(101)</span></h3>
+          <p>Actualización Mayo 2018. <br>Se introducirá a los de primer año en los diferentes elementos del campo de
+            Herbología. Esto dará a los estudiantes una visión general de los usos y aplicaciones de la herbología.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/magic.jfif" alt="magic">
+          <h3>Historia de la Mágia<span>(101)</span></h3>
+          <p>Historia de la Mágia 101 es una introducción básica a la historia del mundo mágico. Temas como
+            las diversas teorías sobre los orígenes de la magia, los olmecas y los clodoveo se verán.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/potions.jfif" alt="potions">
+          <h3>Pociones<span>(101)</span></h3>
+          <p>Este curso proporciona una introducción a las pociones. Los de primer año aprenderán seguridad
+            y el uso de pociones fundamentales, términos, gestación y teoría básica.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/transfiguration.jfif" alt="transfiguration">
+          <h3>Transfiguración<span>(101)</span></h3>
+          <p>Una introducción a la ciencia de la transfiguración. Esto cubrirá lo que es la transfiguración, sus
+            ramas y leyes, y transformaciones inanimadas básicas.</p>
+        </div>
+      </div>
+
+      <!-- second-year ========================= -->
+
+      <div id="second-year" class="courses">
+        <div class="subject">
+          <img src="img/courses/alchemy.jfif" alt="alchemy">
+          <h3>Alquimia<span>(201)</span></h3>
+          <p>¿Te gustaría aprender acerca de la vida eterna? ¿Le gustaría entender cómo aprovechar su
+            ¿Psique espiritual? La alquimia se basa en la magia antigua sobre la que algunos han leído.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/ancient.jfif" alt="runes">
+          <h3>runas antiguas<span>(201)</span></h3>
+          <p>¿Alguna vez te has encontrado con marcas extrañas en libros viejos y desgastados y te has preguntado qué
+            decían? Y tú
+            ¿Tienes amor por los idiomas y la escritura? ¿Te gustaría aprenderlos?</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/astronomy2.jpg" alt="astronomy">
+          <h3>Astronomía<span>(201)</span></h3>
+          <p>La Luna y las lunas de los otros planetas del sistema solar.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/creatures.jfif" alt="creatures">
+          <h3>Cuidado de criaturas mágicas<span>(201)</span></h3>
+          <p>El cuidado de las criaturas mágicas es el curso para cualquier amante de las bestias.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/charms.jfif" alt="charms">
+          <h3>Encantamientos<span>(201)</span></h3>
+          <p>Los estudiantes se centrarán en objetos encantadores y cómo están hechizados. Este curso comienza con una
+            descripción general de los encantadores de objetos y los encantos temporales básicos antes de pasar a
+            discutir.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/defense.jfif" alt="dark defense">
+          <h3>Defensa contra las artes oscuras<span>(201)</span></h3>
+          <p>El segundo año de Defensa Contra las Artes Oscuras continuará construyendo sobre la base establecida en el
+            Año
+            Uno. Continuaremos nuestra exploración de hechizos, cubriendo más hechizos ofensivos.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/herbology.jfif" alt="herbology">
+          <h3>Herbología<span>(201)</span></h3>
+          <p>Actualizado en marzo de 2019. A los segundos años se les conceden varias oportunidades para hacer trabajo
+            práctico
+            con plantas. Para equilibrar el trabajo extendido, se agregan los temas divertidos.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/magic.jfif" alt="magic">
+          <h3>Historia de la Mágia<span>(201)</span></h3>
+          <p>En esta clase, los estudiantes se centrarán en la historia mágica británica. Alguna vez te has preguntado
+            cómo
+            ¿Comenzaron las aldeas mágicas? ¿Cuál fue la primera escuela mágica real de la historia? Aquí lo
+            descubrirás.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/potions1.jfif" alt="potions">
+          <h3>Pociones<span>(201)</span></h3>
+          <p>En el segundo año, los estudiantes de Pociones profundizarán más en la poción, la teoría y explorarán
+            En mayor detalle cómo ciertas pociones pueden afectar a la protección biológica de una bruja o mago.</p>
+        </div>
+      </div>
+
+      <!--third-year=========================== -->
+
+      <div id="third-year" class="courses">
+        <div class="subject">
+          <img src="img/courses/alchemy.jfif" alt="alchemy">
+          <h3>Alquimia<span>(301)</span></h3>
+          <p>En tu tercer año seguirás ampliando tus conocimientos sobre la alquimia.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/ancient.jfif" alt="ancient">
+          <h3>Runas antiguas<span>(301)</span></h3>
+          <p>Sigue aprendiendo sobre antiguos idiomas y sigue aprendiendo a escribir en esas antiguas lenguas.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/astronomy2.jpg" alt="astronomy">
+          <h3>Astronomía<span>(301)</span></h3>
+          <p>Descubrirás como afecta la luna y las lunas de otros planetas de forma mágica a nuestro mundo.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/creatures.jfif" alt="magic">
+          <h3>Cuidado de criaturas mágicas<span>(301)</span></h3>
+          <p>Unicornios, duendecillos de cornualles, dragones, ninfas, centauros y demás criaturas mágicas que viven en
+            nuestro mundo.
+            Aprenderas sobre esas criaturas y posiblemente llegues a conocerlas. En el bosque junto a Hogwarts podrás
+            verlas.
+          </p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/charms.jfif" alt="charms">
+          <h3>Encantamientos<span>(301)</span></h3>
+          <p>Tercer año de encantamientos que editan las propiedades físicas del objeto como endurecimiento,
+            aplanamiento o aligerar. Y también una breve explicación de los encantamientos de modificación de tamaños y
+            formas de dichos objetos</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/defense.jfif" alt="dark">
+          <h3>Defensa contra las artes oscuras<span>(301)</span></h3>
+          <p>Continuaras mejorando tus habilidades para la defensa y aprendiendo nuevos hechizos.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/divination.jfif" alt="divination">
+          <h3>Adivinación<span>(301)</span></h3>
+          <p>Desbloquea los secretos de tu ojo interior. En tu primer año de adivinación aprenderas a leer las cartas
+            del tarot
+            y los posos de té. La adivinación te espera.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/herbology.jfif" alt="herbology">
+          <h3>Herbología<span>(301)</span></h3>
+          <p>¿Alguna vez has pensado en convertirte en sanador? Si es así entonces en tu tercer año
+            aprenderas las propiedades curativas de las plantas del mundo mágico.
+          </p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/magic.jfif" alt="magic">
+          <h3>Historia de la Mágia<span>(301)</span></h3>
+          <p>Ahora que has aprendido la historia mágica británica, nos aventuraremos más en el amplio espectro de la
+            historia
+            de la región a medida que aprendemos sobre la historia europea.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/muggle.jfif" alt="muggle">
+          <h3>Estudios Muggle<span>(301)</span></h3>
+          <p>Nos sumergiremos en algunos de los inventos fascinante de los muggles que los ayudan en su vida cotidiana
+            sin el uso de la mágia.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/potions1.jfif" alt="potions">
+          <h3>Pociones<span>(301)</span></h3>
+          <p>En el tercer año os centrareis en las pociones curativas. En su mayor parte el curso cubrirá la curación
+            física
+            para enfermedades simples y más complejas.
+          </p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/transfiguration.jfif" alt="transfiguration">
+          <h3>Transfiguración<span>(301)</span></h3>
+          <p>En el tercer año continuaremos con las transformaciones, explorando lo inanimado y transformaciones sin
+            hechizos.</p>
+        </div>
+      </div>
+
+      <!-- fourth-year========================== -->
+
+      <div class="courses" id="fourth-year">
+        <div class="subject">
+          <img src="img/courses/alchemy.jfif" alt="alchemy">
+          <h3>Alquimia<span>(401)</span></h3>
+          <p>La alquimia no es estrictamente científica, también es espiritual. Este año se centrará principalmente en
+            una rama de la alquimia que se desarrolló a partir de las enseñanzas de Hermes Trismegisto.
+          </p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/ancient.jfif" alt="ancient">
+          <h3>Runas antiguas<span>(401)</span></h3>
+          <p>¿Fascinado por los símbolos de las culturas antiguas? Entra y aprende sobre las runas antiguas y sobre
+            lo que usaron las culturas para registrar sus conocimientos.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/ancient1.jfif" alt="ancient">
+          <h3>Estudios antiguos<span>(401)</span></h3>
+          <p>¿Alguna vez te has preguntado como era la mágia en la antigüedad? Una época en la que todos conocían y
+            adoraban
+            a los practicantes de mágia. ¿Usaban varitas y pociones? En este año lo descubrirás.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/astronomy2.jpg" alt="astronomy">
+          <h3>Astronomía<span>(401)</span></h3>
+          <p>Este curso se está reescribiendo actualmente, ¡el nuevo material estará disponible pronto!</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/transfiguration.jfif" alt="transfiguration">
+          <h3>Transfiguración<span>(401)</span></h3>
+          <p>Continuaras con el viaje a través de las transformaciones generales y transformaciones trans-especie.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/charms.jfif" alt="charms">
+          <h3>Encantamientos<span>(401)</span></h3>
+          <p>Profundizaremos en el lanzamiento de hechizos intermedios este año. Comenzaremos con una exploración de
+            Contra-encantamientos,
+            luego pase a Encantamientos sustantivos (es decir, amuletos que tratan con amuletos térmicos)</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/defense.jfif" alt="dark">
+          <h3>Defensa contra las artes oscuras<span>(401)</span></h3>
+          <p>Defensa contra las artes oscuras en ell cuarto año obligará a los estudiantes a enfrentar lo desconocido.
+            Equipado con nada más
+            que su varita y algunas pistas crípticas para guiarlos a través del año.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/divination.jfif" alt="divination">
+          <h3>Adivinación <span>(401)</span></h3>
+          <p>En este año de adivinación, exploraremos los diversos métodos de adivinación física.
+            Entra y descubre más de lo que creías posible con un vistazo a la persona a tu lado.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/herbology.jfif" alt="herbology">
+          <h3>Herbología <span>(401)</span></h3>
+          <p>Se publicaran lo antes posible. Gracias por su paciencia. 😊</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/magicalart.png" alt="magic">
+          <h3>Historia de la mágia<span>(401)</span></h3>
+          <p>Conocido como el continente más grande del mundo, Asia es el hogar de muchas culturas y creencias
+            misteriosas
+            que no nos son familiares, ¡pero ya no! Ven a explorar las muchas maravillas de este continente.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/muggle.jfif" alt="muggle">
+          <h3>Estudios Muggle <span>(401)</span></h3>
+          <p>Este año Estudios Muggles se centra en lo más popular en la sociedad muggle desde el interior.
+            ¡Películas! Cubriremos todo.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/mythology.jfif" alt="mythology">
+          <h3>Mitología <span>(401)</span></h3>
+          <p>Esta clase enseñará a los estudiantes que estén interesados en seguir carreras en diversos campos
+            sobre el Mitología de las principales civilizaciones antiguas de todo el mundo.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/potions1.jfif" alt="potions">
+          <h3>Pociones <span>(401)</span></h3>
+          <p>En el cuarto año de Pociones, los estudiantes se centrarán en las pociones modificadoras físicas.
+            Esto incluirá belleza, eliminación de imperfecciones, e incluso la famosa Poción Multijugos.</p>
+        </div>
+      </div>
+
+      <!-- fifth-year=========================== -->
+
+      <div id="fifth-year" class="courses">
+        <div class="subject">
+          <img src="img/courses/alchemy.jfif" alt="alchemy">
+          <h3>Alquimia<span>(501)</span></h3>
+          <p>¿Alguna vez has aspirado a ser un sanador? La alquimia es y ha sido una
+            tremenda influencia en la medicina practica a través de los siglos.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/alchemyo.jfif" alt="alchemy">
+          <h3>Alquimia O.W.L<span>(O.W.L)</span></h3>
+          <p>Este es el examen O.W.L. para Alquimia. Debes aprobar este curso con un "Supera Expectativas"
+            para continuar con los estudios de N.E.W.T. en este curso.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/ancient.jfif" alt="ancient">
+          <h3>Runas antiguas<span>(501)</span></h3>
+          <p>¡Adéntrate en el mundo de los jeroglíficos egipcios! Este año, desentrañaremos las complejas capas
+            de su significado en las inscripciones jeroglíficas, así como estudiar su uso.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/ancient1.jfif" alt="ancient">
+          <h3>Runas antiguas O.W.L<span>(O.W.L)</span></h3>
+          <p>Este es el examen O.W.L. para Runas Antiguas. Debes aprobar este curso con un
+            "Supera Expectativas" para continuar con los estudios de N.E.W.T. en este curso.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/creatures.jfif" alt="creatures">
+          <h3>Cuidado de criaturas mágicas<span>(501)</span></h3>
+          <p>A lo largo de este año, aprenderás sobre diez criaturas diferentes, que varían de XXX a XXXX en
+            clasificación. Aprenderás sobre criaturas a las que se les debe respeto.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/charms.jfif" alt="charms">
+          <h3>Encantamientos<span>(501)</span></h3>
+          <p>Discutirá áreas más prácticas de lanzamiento de hechizos que se pueden usar en su hogar,
+            discutiremos formas de mantener su hogar seguro.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/defense.jfif" alt="dark">
+          <h3>Difensa contra las artes oscuras<span>(501)</span></h3>
+          <p>Lleva tu educación a un nuevo nivel mientras nos preparamos para tus exámenes O.W.L.
+            Comenzamos a cubrir la teoría del hechizo ofensivo.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/divination.jfif" alt="divination">
+          <h3>Adivinación<span>(501)</span></h3>
+          <p>¿Alguna vez has tenido sueños tan vívidos que todavía se sienten reales cuando te despiertas?
+            ¿Puedes hablar con los que han pasado? Si es así, este de adivinación te emocionará.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/herbology.jfif" alt="herbology">
+          <h3>Herbología<span>(501)</span></h3>
+          <p>Las lecciones de herbología de Año Nuevo se publicarán lo antes posible. Gracias.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/magicalart.png" alt="magic">
+          <h3>Historia de la mágia<span>(501)</span></h3>
+          <p>Únase a nosotros mientras continuamos nuestro viaje, explorando las diversas historias mágicas
+            y culturas en todo el mundo!</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/magic.jfif" alt="magic">
+          <h3>Historia de la mágia O.W.L<span>(O.W.L)</span></h3>
+          <p>Este es el examen O.W.L. para Historia de la Magia. Debe pasar con un "EE"
+            para continuar con estudios N.E.W.T. en este curso.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/muggle.jfif" alt="muggle">
+          <h3>Estudios Muggle<span>(501)</span></h3>
+          <p>Este año estudios muggle se aleja de sus estudios de cine del año pasado,
+            para explorar la cultura pop y su impacto en los muggles y sus hábitos.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/mythology.jfif" alt="mythology">
+          <h3>Mitología<span>(501)</span></h3>
+          <p>Los estudiantes que se inscriban en nuestro segundo año de estudios mitológicos se
+            encontrarán en una gira por Europa. Estudiaremos los mitos de Grecia y Roma.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/potions.jfif" alt="potions">
+          <h3>Pociones<span>(501)</span></h3>
+          <p>¡Bienvenido a Pociones de quinto año! Este año discutiremos y exploraremos pociones relacionadas
+            con La psicología y la mente. ¡Espero verte en las mazmorras!</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/potions1.jfif" alt="potions">
+          <h3>Pociones O.W.L<span>(O.W.L)</span></h3>
+          <p>Este es el examen O.W.L. para pociones. Debes aprobar este curso con un
+            "Supera Expectativas" para continuar con los estudios N.E.W.T. en este curso.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/transfiguration.jfif" alt="transfiguration">
+          <h3>Transfiguración<span>(501)</span></h3>
+          <p>Transfiguración 501 nos saca del reino de las transformaciones y nos lleva al maravilloso mundo de la
+            desaparición.
+            Cubriremos la desaparición general, el destierro y todo lo que hay en el futuro.</p>
+        </div>
+      </div>
+
+      <!-- sixth-year======================== -->
+
+      <div id="sixth-year" class="courses">
+
+        <div class="subject">
+          <img src="img/courses/alchemy.jfif" alt="alchemy">
+          <h3>Alquimia<span>(601)</span></h3>
+          <p>Los cuentos de inmortalidad, vida artificial, transmutación y otros fenómenos inexplicables envuelven el
+            estudio de la alquimia en el misterio.
+            ¿Puede crear de formas de vida sintéticas como los homúnculos?</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/ancient1.jfif" alt="ancient">
+          <h3>Runas antiguas<span>(601)</span></h3>
+          <p>En el primer año de sus estudios N.E.W.T. en Runas Antiguas, exploraremos el Mediterráneo,
+            Oceanía, y una variedad de scripts asociados.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/ancient.jfif" alt="ancient">
+          <h3>Estudios antiguos<span>(601)</span></h3>
+          <p>Estudios Antiguos nos lleva a través del océano a las Américas. Nuestros estudios se centrarán
+            en civilizaciones familiares como los mayas, incas, aztecas y navajos.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/creatures.jfif" alt="creatures">
+          <h3>Cuidado de criaturas mágicas<span>(601)</span></h3>
+          <p>Cubriremos quince criaturas diferentes que son populares
+            tanto en el mundo mágico como en el muggle.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/charms.jfif" alt="Charms">
+          <h3>Encantamientos<span>(601)</span></h3>
+          <p>Trataremos aspectos teóricos y hechizos más complejos que hayas aprendido en tus primeros cinco años de
+            educación mágica.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/defense.jfif" alt="dark">
+          <h3>Defensa contra las artes oscuras<span>(601)</span></h3>
+          <p>La defensa del sexto año contra las artes oscuras se vuelve más pesada en teoría a medida que los
+            estudiantes comienzan su trabajo en el nivel N.E.W.T.
+            Este año se centra en la magia mental y la defensa de la mente.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/divination.jfif" alt="divination">
+          <h3>Adivinación<span>(601)</span></h3>
+          <p>¡Aventúrate, si te atreves, en el mundo de los presagios! Sin embargo, tenga cuidado,
+            una vez que comience, puede comenzar a verlos en todas partes...</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/magic.jfif" alt="magic">
+          <h3>Historia de la mágia<span>(601)</span></h3>
+          <p>Hemos recorrido nuestro camino alrededor del mundo a lo largo de sus estudios aquí en Hogwarts,
+            pero es hora de regreso a la casa de los olmecas y mayas - las Américas!</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/magicalart.png" alt="magical">
+          <h3>Artes mágicas<span>(601)</span></h3>
+          <p>¡Ven a explorar las artes visuales y su funcionamiento interno dentro del mundo mágico! En este curso,
+            estudiarás varios medios de arte mágico, que van desde el dibujo hasta el retrato.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/mythology.jfif" alt="mythology">
+          <h3>Mitología<span>(601)</span></h3>
+          <p>Te llevará en un viaje a través de las Américas, estudiando los mitos de
+            civilizaciones como los inuit, navajos, incas y muchos más.</p>
+        </div>
+      </div>
+
+      <!-- seventh-year ======================== -->
+
+      <div id="seventh-year" class="courses">
+        <div class="subject">
+          <img src="img/courses/ancient1.jfif" alt="ancient">
+          <h3>Runas antiguas<span>(701)</span></h3>
+          <p>Para tu último año en Runas Antiguas, prepárate para abrirte a los misterios restantes de el mundo. 
+            Después de sus estudios de N.E.W.T., cualquier guión que encuentre ya será familiar.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/ancient.jfif" alt="ancient">
+          <h3>Estudios antiguos<span>(701)</span></h3>
+          <p>Estudios antiguos nos lleva una vez más a través de un océano, esta vez el Pacífico, a Asia y Oceanía. 
+            Nuestros estudios se centrarán en civilizaciones familiares como la japonesa.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/creatures.jfif" alt="creatures">
+          <h3>Cuidado de criaturas mágicas<span>(701)</span></h3>
+          <p>En tu último año de Cuidado de criaturas mágicas, catorce criaturas mágicas completarán tu educación. 
+            Estas criaturas son algunas de las más peligrosas e interesantes que hemos estudiado a lo largo de estos años.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/charms.jfif" alt="charms">
+          <h3>Encantamientos<span>(701)</span></h3>
+          <p>El último año cubre la teoría avanzada de encantamientos y sus aplicaciones. Nos ocuparemos de aspectos 
+            teóricos como los límites de la magia y los encantos experimentales.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/defense.jfif" alt="defense">
+          <h3>Defensa contra las artes oscuras<span>(701)</span></h3>
+          <p>En este curso final para Defensa Contra las Artes Oscuras, exploraremos los peores aspectos de las Artes Oscuras.
+             Usando la lente de los derechos humanos, estaremos mirando a los más malvados.</p>
+        </div>
+        <div class="subject">
+          <img src="img/courses/mythology.jfif" alt="mythology">
+          <h3>Mitología<span>(701)</span></h3>
+          <p>En este último año de Mitología, viaja a Oriente y explora la gran variedad que tiene que ofrecer. 
+            Así comienza su recorrido relámpago por los mitos y el folclore asiáticos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meet your Staffs -->
+
+    <div class="staffs show-display">
+      <div class="hogwartsStaff">
+      </div>
+    </div>
+
+    <!-- choose your house by your personality -->
+
+    <div class="houses-in-hogwarts show-display">
+      <div class="container-for-sort">
+        <div class="sorting-hat">
+          <h1>Descubre tu casa de Hogwarts</h1>
+          <button class="sort-btn">SE HECHIZADO</button>
+        </div>
+        <div class="sorting" id="sorting-quiz">
+          <div class="overlay close-quiz"></div>
+          <div class="quiz-container">
+            <span class="close-ico close-quiz"><i class="fa-solid fa-circle-xmark"></i></span>
+            <div class="questions">
+              <div class="quiz">
+                <p>1) ¿De cúal de tus habilidades estas más orgulloso?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="one" id="one-one" value="10">
+                    <label for="one-one"><i class="fa-solid fa-star"></i>1) Aprender nueva información</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="one" id="one-two" value="20">
+                    <label for="one-two"><i class="fa-solid fa-star"></i>2) Hacer nuevos amigos</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="one" id="one-three" value="40">
+                    <label for="one-three"><i class="fa-solid fa-star"></i>3) Conseguir lo que quiero</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="one" id="one-four" value="30">
+                    <label for="one-four"><i class="fa-solid fa-star"></i>4) Guardar secretos</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz">
+                <p>2) ¿Qué es lo que más te gusta hacer en tu tiempo libre?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="two" id="two-one" value="20">
+                    <label for="two-one"><i class="fa-solid fa-star"></i>1) Leer un libro</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="two" id="two-two" value="10">
+                    <label for="two-two"><i class="fa-solid fa-star"></i>2) Ayudar a alguien con sus deberes</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="two" id="two-three" value="40">
+                    <label for="two-three"><i class="fa-solid fa-star"></i>3) Burlarse de alguien</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="two" id="two-four" value="30">
+                    <label for="two-four"><i class="fa-solid fa-star"></i>4) Tumbarme y relajarme</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz">
+                <p>3) ¿Cómo describirias a tu circulo de amistades?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="three" id="three-one" value="30">
+                    <label for="three-one"><i class="fa-solid fa-star"></i>1) Grande porque mucha gente me conoce</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="three" id="three-two" value="10">
+                    <label for="three-two"><i class="fa-solid fa-star"></i>2) No muy grande, pero tampoco pequeño.</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="three" id="three-three" value="40">
+                    <label for="three-three"><i class="fa-solid fa-star"></i>3) Solo salgo con unos pocos amigos.</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="three" id="three-four" value="20">
+                    <label for="three-four"><i class="fa-solid fa-star"></i>4) Me gusta ir a mi bola.</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz">
+                <p>4) ¿Qué tipo de casa te gustaría tener?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="four" id="four-one" value="40">
+                    <label for="four-one"><i class="fa-solid fa-star"></i>1) Una mansión</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="four" id="four-two" value="30">
+                    <label for="four-two"><i class="fa-solid fa-star"></i>2) Un gran Bungalow con sitio para un fuego.</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="four" id="four-three" value="10">
+                    <label for="four-three"><i class="fa-solid fa-star"></i>3) No importa mientras sea reconfortante.</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="four" id="four-four" value="20">
+                    <label for="four-four"><i class="fa-solid fa-star"></i>4) Una casa razonable con todas mis necesidades.</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz">
+                <p>5) ¿Si ensucias algo cómo lo arreglas?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="five" id="five-one" value="30">
+                    <label for="five-one"><i class="fa-solid fa-star"></i>1) Me voy a disculpar y lo limpio.</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="five" id="five-two" value="40">
+                    <label for="five-two"><i class="fa-solid fa-star"></i>2) Lo dejo ahí y sigilosamente me voy.</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="five" id="five-three" value="20">
+                    <label for="five-three"><i class="fa-solid fa-star"></i>3) Lo limpio rápido para que así nadie se de cuenta.</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="" id="five-four" value="10">
+                    <label for="five-four"><i class="fa-solid fa-star"></i>4) Llamo a mis amigos y lo limpiamos rápido entre todos.</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz">
+                <p>6) ¿Cómo te describiria la gente que te conoce?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="six" id="six-one" value="20">
+                    <label for="six-one"><i class="fa-solid fa-star"></i>1) Listo</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="six" id="six-two" value="30">
+                    <label for="six-two"><i class="fa-solid fa-star"></i>2) Interesado</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="six" id="six-three" value="40">
+                    <label for="six-three"><i class="fa-solid fa-star"></i>3) Bully</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="six" id="six-four" value="10">
+                    <label for="six-four"><i class="fa-solid fa-star"></i>4) Normal</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz">
+                <p>7) ¿Qué es lo más importante para ti?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="seven" id="seven-one" value="30">
+                    <label for="seven-one"><i class="fa-solid fa-star"></i>1) Libertad</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="seven" id="seven-two" value="10">
+                    <label for="seven-two"><i class="fa-solid fa-star"></i>2) Familia</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="seven" id="seven-three" value="40">
+                    <label for="seven-three"><i class="fa-solid fa-star"></i>3) Poder</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="seven" id="seven-four" value="20">
+                    <label for="seven-four"><i class="fa-solid fa-star"></i>4) Amigos</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz">
+                <p>8) ¿En tus vacaciones en Howgarts que harías?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="eight" id="eight-one" value="40">
+                    <label for="eight-one"><i class="fa-solid fa-star"></i>1) Una fiesta</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="eight" id="eight-two" value="20">
+                    <label for="eight-two"><i class="fa-solid fa-star"></i>2) Ayudar en mi casa</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="eight" id="eight-three" value="10">
+                    <label for="eight-three"><i class="fa-solid fa-star"></i>3) Estudiar para el siguiente año</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="eight" id="eight-four" value="30">
+                    <label for="eight-four"><i class="fa-solid fa-star"></i>4) Practicar mágia</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz">
+                <p>9) ¿Qué harías si un ladrón entra a tu casa?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="nine" id="nine-one" value="40">
+                    <label for="nine-one"><i class="fa-solid fa-star"></i>1) Lo enfrentaría</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="nine" id="nine-two" value="20">
+                    <label for="nine-two"><i class="fa-solid fa-star"></i>2) Me escondería</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="nine" id="nine-three" value="10">
+                    <label for="nine-three"><i class="fa-solid fa-star"></i>3) Obedezco al ladrón</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="nine" id="nine-four" value="30">
+                    <label for="nine-four"><i class="fa-solid fa-star"></i>4) Pido ayuda</label>
+                  </div>
+                </div>
+              </div>
+              <div class="quiz">
+                <p>10) ¿Si fueras un mago y víeras un animal herido que harías?</p>
+                <div class="quiz-options">
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="ten" id="ten-one" value="40">
+                    <label for="ten-one"><i class="fa-solid fa-star"></i>1) Lo curaría aunque sea un mago inexperto</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="ten" id="ten-two" value="20">
+                    <label for="ten-two"><i class="fa-solid fa-star"></i>2) Me iría</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="ten" id="ten-three" value="30">
+                    <label for="ten-three"><i class="fa-solid fa-star"></i>3) Llamaría a un mago más experimentado</label>
+                  </div>
+                  <div class="option">
+                    <input class="quiz-input" type="radio" name="ten" id="ten-four" value="10">
+                    <label for="ten-four"><i class="fa-solid fa-star"></i>4) No sabría que hacer</label>
+                  </div>
+                </div>
+              </div>
+              <button class="btn sort-submit">RESULTADO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="house-container"></div>
+    </div>
+
+    <!-- all peoples in Hogwarts -->
+
+    <div class="characters show-display">
+      <div class="types">
+        <select name="types" id="char-type">
+          <option value="all">Todos</option>
+          <option value="gryffindor">Gryffindor</option>
+          <option value="ravenclaw">Ravenclaw</option>
+          <option value="hufflepuff">Hufflepuff</option>
+          <option value="slytherin">Slytherin</option>
+        </select>
+      </div>
+      <div class="characters-inhogwarts"></div>
+      <div class="types-inhogwarts"></div>
+    </div>
+  </section>
+
+
+
+      <script defer src="index.js"></script>
+</body>
+
+</html>
